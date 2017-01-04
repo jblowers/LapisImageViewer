@@ -132,7 +132,7 @@ void LapisImageViewer::onLoadIQMData()
 		}
 
 		QTextStream in(&file);
-		QString line;// = in.readLine(); // first line is junk data (actually just the name of the columns)
+		QString line;// = in.readLine(); // first line is junk data
 		while ( !in.atEnd() ) {
 			line = in.readLine();
 			QStringList  fields = line.split("\t");
@@ -241,7 +241,7 @@ void LapisImageViewer::onLoadIQMData()
 
 	QTextStream in(&file);
 	QString line;// = in.readLine(); // first line is junk data
-	in.readLine(); // ignoring the first line
+	in.readLine(); // ignoring the first line because it is column info
 	while ( !in.atEnd() ) {
 		line = in.readLine();
 		QStringList  fields = line.split(",");
