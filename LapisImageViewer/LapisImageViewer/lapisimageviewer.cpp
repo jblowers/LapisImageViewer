@@ -345,7 +345,7 @@ void LapisImageViewer::onCheckImageDirectoryPushed()
 			nTifCount++;
 
 		}
-		else if ( fils[i].contains("IQM") ) {
+		else if ( fils[i].contains("_IQM") ) {
 			// iqm file
 			nIqmCount++;
 			QString strIqmPath = direct.absoluteFilePath(fils[i]);
